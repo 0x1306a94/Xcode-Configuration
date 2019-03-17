@@ -58,6 +58,22 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
     #endif
 }
 
+//MARK: - load from nib
+extension ___FILEBASENAMEASIDENTIFIER___ {
+    
+    /// Load a ___FILEBASENAMEASIDENTIFIER___ instance from xib
+    ///
+    /// - Parameter bundle: the default is Bundle.main
+    /// - Returns: ___FILEBASENAMEASIDENTIFIER___ instance, may be empty
+    class func makeFromNib(with bundle: Bundle = Bundle.main) -> ___FILEBASENAMEASIDENTIFIER___? {
+        guard let objs = bundle.loadNibNamed("___FILEBASENAMEASIDENTIFIER___", owner: nil, options: nil),
+            !objs.isEmpty,
+            let view = objs.first as? ___FILEBASENAMEASIDENTIFIER___ else {
+                return nil
+        }
+        return view
+    }
+}
 
 //MARK: - initial Methods
 fileprivate extension ___FILEBASENAMEASIDENTIFIER___ {

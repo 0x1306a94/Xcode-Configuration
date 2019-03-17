@@ -27,6 +27,15 @@
 }
 #endif
 
+#pragma mark - load from nib
++ (instancetype __nullable)makeFromNibWithBundle:(NSBundle *)bundle {
+    if (!bundle) bundle = [NSBundle mainBundle];
+    NSArray *objs = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:nil options:nil];
+    if (!objs || objs.count == 0) return nil;
+    if ([objs.firstObject isKindOfClass:self.class]) return objs.firstObject;
+    return nil;
+}
+
 #pragma mark - life cycle
 - (instancetype)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
