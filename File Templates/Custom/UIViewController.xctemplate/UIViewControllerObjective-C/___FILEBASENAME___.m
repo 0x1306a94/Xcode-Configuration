@@ -36,7 +36,7 @@
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -45,12 +45,12 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    [super viewWillDisappear:animated];
     
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    [super viewDidDisappear:animated];
     
 }
 
