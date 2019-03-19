@@ -12,9 +12,9 @@ function sync_local() {
 
 	cp -rf ~/Library/Developer/Xcode/Templates/File\ Templates/* ./File\ Templates/ || error_exit "copy local file templates error"
 
-	# if [[ $(ls -l ~/Library/Developer/Xcode/UserData/CodeSnippets | grep -c '.codesnippet') != 0 ]]; then
-	cp -f ~/Library/Developer/Xcode/UserData/CodeSnippets/*.codesnippet ./CodeSnippets/ || error_exit "copy local codesnippet error"
-	# fi
+	if [[ $(ls -l ~/Library/Developer/Xcode/UserData/CodeSnippets | grep -c '.codesnippet') != 0 ]]; then
+		cp -f ~/Library/Developer/Xcode/UserData/CodeSnippets/*.codesnippet ./CodeSnippets/ || error_exit "copy local codesnippet error"
+	fi
 	
 }
 
@@ -27,8 +27,9 @@ function sync_remote() {
 		mkdir -p ~/Library/Developer/Xcode/UserData/CodeSnippets/
 	fi
 	cp -rf ./File\ Templates/* ~/Library/Developer/Xcode/Templates/File\ Templates/ || error_exit "copy remote file templates error"
-
-	cp -f ./CodeSnippets/*.codesnippet ~/Library/Developer/Xcode/UserData/CodeSnippets/ || error_exit "copy remote codesnippet error"
+	if [[ $(ls -l ./CodeSnippets | grep -c '.codesnippet') != 0  ]]; then
+		cp -f ./CodeSnippets/*.codesnippet ~/Library/Developer/Xcode/UserData/CodeSnippets/ || error_exit "copy remote codesnippet error"
+	fi
 }
 
 function error_exit {
