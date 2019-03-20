@@ -39,6 +39,12 @@
     [self commonInit];
 }
 
+#pragma mark - initial Methods
+- (void)commonInit {
+    /*custom view u want draw in here*/
+    self.contentView.backgroundColor = [UIColor whiteColor];
+}
+
 #pragma mark - layout
 - (void)updateConstraints {
     /*更新约束，自定义view应该重写此方法在其中建立constraints.*/
@@ -52,15 +58,10 @@
 
 }
 
-#pragma mark - initial Methods
-- (void)commonInit {
-    /*custom view u want draw in here*/
-    self.contentView.backgroundColor = [UIColor whiteColor];
-}
-
 #pragma mark - private method
 
 #pragma mark - public method
 
 #pragma mark - getters and setters
+
 @end
