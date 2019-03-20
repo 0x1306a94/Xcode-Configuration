@@ -27,6 +27,15 @@
 }
 #endif
 
+#pragma mark - load from nib
++ (instancetype __nullable)makeFromNibWithBundle:(NSBundle *)bundle {
+    if (!bundle) bundle = [NSBundle mainBundle];
+    NSArray *objs = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:nil options:nil];
+    if (!objs || objs.count == 0) return nil;
+    if ([objs.firstObject isKindOfClass:self.class]) return objs.firstObject;
+    return nil;
+}
+
 #pragma mark - life cycle
 - (instancetype)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -34,31 +43,29 @@
     }
     return self;
 }
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if ((self = [super initWithCoder:aDecoder])) {
-        [self commonInit];
-    }
-    return self;
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self commonInit];
 }
 
-#pragma mark - Initial Methods
-- (void)commonInit {
-    /*custom view u want draw in here*/
-    self.backgroundColor = [UIColor whiteColor];
-}
-
-
-#pragma mark - Layout
+#pragma mark - layout
 - (void)updateConstraints {
     /*更新约束，自定义view应该重写此方法在其中建立constraints.*/
-    
+
     [super updateConstraints];//this line must be the last line of this method.^_^
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     /*如果你需要更精确控制子view，而不是使用限制或autoresizing行为，就需要实现该方法。*/
-    
+
+}
+
+#pragma mark - Initial Methods
+- (void)commonInit {
+    /*custom view u want draw in here*/
+    self.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - private method
