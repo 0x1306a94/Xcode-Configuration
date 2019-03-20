@@ -41,17 +41,17 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    
+
 }
 
 - (void)viewWillLayoutSubviews {
@@ -67,17 +67,14 @@
 - (void)commonInit {
     self.view.backgroundColor = [UIColor whiteColor];
 
-    
+
 }
 
 #pragma mark - private method
 
-
-#pragma mark - public Method
-
-
 #pragma mark - event response
 
+#pragma mark - public Method
 
 #pragma mark - UITableViewDelegate
 
