@@ -32,6 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self commonInit];
+    [self event];
 }
 
 /*
@@ -73,13 +74,14 @@
 #pragma mark - private method
 
 #pragma mark - event response
+- (void)event {
 
+}
 #pragma mark - public Method
 
-#pragma mark - UITableViewDelegate
-
-
 #pragma mark - UITableViewDataSource
+
+#pragma mark - UITableViewDelegate
 //...(多个代理方法依次往下写)
 
 #pragma mark - getters and setters
