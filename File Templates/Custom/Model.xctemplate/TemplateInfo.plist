@@ -59,27 +59,6 @@
 		</dict>
 		<dict>
 			<key>Identifier</key>
-			<string>XIB</string>
-			<key>Name</key>
-			<string>Also create XIB file</string>
-			<key>Description</key>
-			<string>Whether to create a XIB file with the same name</string>
-			<key>Type</key>
-			<string>checkbox</string>
-			<key>RequiredOptions</key>
-			<dict>
-				<key>cocoaTouchSubclass</key>
-				<array>
-					<string>NSObject</string>
-				</array>
-			</dict>
-			<key>Default</key>
-			<string>false</string>
-			<key>NotPersisted</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>Identifier</key>
 			<string>languageChoice</string>
 			<key>Required</key>
 			<true/>

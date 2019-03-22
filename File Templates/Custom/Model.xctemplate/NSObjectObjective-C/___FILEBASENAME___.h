@@ -3,6 +3,7 @@
 ___IMPORTHEADER_cocoaTouchSubclass___
 
 /* System */
+#import <Foundation/Foundation.h>
 
 /* ViewController */
 
