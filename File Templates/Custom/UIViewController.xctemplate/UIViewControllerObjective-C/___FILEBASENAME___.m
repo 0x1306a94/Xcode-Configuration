@@ -32,51 +32,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self commonInit];
-    [self event];
+    [self addEventAction];
 }
-
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-
-}
-
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-}
-*/
 
 #pragma mark - initial Methods
 - (void)commonInit {
     self.view.backgroundColor = [UIColor whiteColor];
+    [self addSubViews];
+    [self addSubViewConstraints];
+}
 
+#pragma mark - add subview
+- (void)addSubViews {
+
+}
+
+#pragma mark - layout
+- (void)addSubViewConstraints {
+
+}
+
+#pragma mark - event action
+- (void)addEventAction {
 
 }
 
 #pragma mark - private method
 
-#pragma mark - event response
-- (void)event {
 
-}
 #pragma mark - public Method
 
 #pragma mark - UITableViewDataSource
