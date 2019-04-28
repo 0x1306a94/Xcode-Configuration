@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sa</string>
+	<string>clang-format-on</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, assign) &lt;#type#&gt; &lt;#name#&gt;;</string>
+	<string>// clang-format on</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6E47AF67-30EE-4C2D-B8BB-B0E8255DCDC4</string>
+	<string>ED747083-743C-4AE9-834A-F3EE52A543B7</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>oc assign property</string>
+	<string>clang format on</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>oc assign property</string>
+	<string>clang format on</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
