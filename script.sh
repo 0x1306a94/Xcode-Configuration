@@ -42,5 +42,5 @@ if [[ $1 == "local" ]]; then
 elif [[ $1 == "remote" ]]; then
 	sync_remote
 else
-	echo "script.sh local or remote"
+	echo "script.sh local(将本地同步到远端) or remote(将远端同步到本地)"
 fi
