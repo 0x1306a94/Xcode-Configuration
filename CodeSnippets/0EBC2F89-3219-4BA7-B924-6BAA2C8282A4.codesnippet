@@ -3,21 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>clang-format-on</string>
+	<string>ignore waring selector</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/* clang-format on */</string>
+	<string>#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    &lt;#需要禁用警告的代码#&gt;
+#pragma clang diagnostic pop</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>ED747083-743C-4AE9-834A-F3EE52A543B7</string>
+	<string>0EBC2F89-3219-4BA7-B924-6BAA2C8282A4</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>clang format on</string>
+	<string>忽略 Undeclared Selector</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>clang format on</string>
+	<string>忽略 Undeclared Selector</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

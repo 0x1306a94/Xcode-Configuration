@@ -3,21 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>clang-format-on</string>
+	<string>ignore waring</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/* clang-format on */</string>
+	<string>#pragma clang diagnostic push
+#pragma clang diagnostic ignored "&lt;#Waring Name#&gt;"
+      &lt;#需要禁用警告的代码#&gt;
+#pragma clang diagnostic pop</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>ED747083-743C-4AE9-834A-F3EE52A543B7</string>
+	<string>3F45D313-8551-4024-94A9-44370700106D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>clang format on</string>
+	<string>忽略指定警告</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>clang format on</string>
+	<string>忽略指定警告</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
