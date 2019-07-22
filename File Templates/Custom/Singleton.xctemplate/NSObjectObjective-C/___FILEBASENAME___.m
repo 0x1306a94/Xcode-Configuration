@@ -31,7 +31,7 @@ static ___FILEBASENAMEASIDENTIFIER___ *_sharedInstance = nil;
 #endif
 
 #pragma mark - life cycle
-+ (instancetype)sharedInstance {
++ (instancetype)shared {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //because has rewrited allocWithZone  use NULL avoid endless loop lol.

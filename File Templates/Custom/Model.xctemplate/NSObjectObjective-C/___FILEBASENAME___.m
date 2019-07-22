@@ -1,18 +1,10 @@
 //___FILEHEADER___
 
-#import "___FILEBASENAME___.h"
-
 /* System */
 
-/* ViewController */
-
-/* View */
-
 /* Model */
-
+#import "___FILEBASENAME___.h"
 /* Util */
-
-/* NetWork InterFace */
 
 /* Vender */
 

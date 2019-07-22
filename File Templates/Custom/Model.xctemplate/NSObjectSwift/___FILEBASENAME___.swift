@@ -3,15 +3,9 @@
 /* System */
 import Foundation
 
-/* ViewController */
-
-/* View */
-
 /* Model */
 
 /* Util */
-
-/* NetWork InterFace */
 
 /* Vender */
 

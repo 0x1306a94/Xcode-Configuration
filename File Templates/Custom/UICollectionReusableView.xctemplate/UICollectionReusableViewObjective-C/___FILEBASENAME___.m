@@ -35,6 +35,7 @@
     }
     return self;
 }
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self commonInit];

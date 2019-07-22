@@ -5,15 +5,9 @@ ___IMPORTHEADER_cocoaTouchSubclass___
 /* System */
 #import <Foundation/Foundation.h>
 
-/* ViewController */
-
-/* View */
-
 /* Model */
 
 /* Util */
-
-/* NetWork InterFace */
 
 /* Vender */
 
