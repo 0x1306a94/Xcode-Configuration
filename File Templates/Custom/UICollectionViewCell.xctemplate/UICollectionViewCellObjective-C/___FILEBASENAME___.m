@@ -30,7 +30,7 @@
 
 #pragma mark - life cycle
 - (instancetype)initWithFrame:(CGRect)frame {
-    if ((self == [super initWithFrame:frame])) {
+    if (self == [super initWithFrame:frame]) {
         [self commonInit];
     }
     return self;
