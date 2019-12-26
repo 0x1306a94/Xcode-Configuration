@@ -10,10 +10,18 @@ function sync_local() {
 		mkdir -p ./CodeSnippets/
 	fi
 
+	if [[ ! -d "./FontAndColorThemes/" ]]; then
+		mkdir -p ./FontAndColorThemes/
+	fi
+
 	cp -rf ~/Library/Developer/Xcode/Templates/File\ Templates/* ./File\ Templates/ || error_exit "copy local file templates error"
 
 	if [[ $(ls -l ~/Library/Developer/Xcode/UserData/CodeSnippets | grep -c '.codesnippet') != 0 ]]; then
 		cp -f ~/Library/Developer/Xcode/UserData/CodeSnippets/*.codesnippet ./CodeSnippets/ || error_exit "copy local codesnippet error"
+	fi
+
+	if [[ $(ls -l ~/Library/Developer/Xcode/UserData/FontAndColorThemes | grep -c '.xccolortheme') != 0 ]]; then
+		cp -f ~/Library/Developer/Xcode/UserData/FontAndColorThemes/*.xccolortheme ./FontAndColorThemes/ || error_exit "copy local xccolortheme error"
 	fi
 	
 }
@@ -26,9 +34,18 @@ function sync_remote() {
 	if [[ ! -d "~/Library/Developer/Xcode/UserData/CodeSnippets/" ]]; then
 		mkdir -p ~/Library/Developer/Xcode/UserData/CodeSnippets/
 	fi
+
+	if [[ ! -d "~/Library/Developer/Xcode/UserData/FontAndColorThemes/" ]]; then
+		mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+	fi
+
 	cp -rf ./File\ Templates/* ~/Library/Developer/Xcode/Templates/File\ Templates/ || error_exit "copy remote file templates error"
 	if [[ $(ls -l ./CodeSnippets | grep -c '.codesnippet') != 0  ]]; then
 		cp -f ./CodeSnippets/*.codesnippet ~/Library/Developer/Xcode/UserData/CodeSnippets/ || error_exit "copy remote codesnippet error"
+	fi
+
+	if [[ $(ls -l ./FontAndColorThemes | grep -c '.xccolortheme') != 0  ]]; then
+		cp -f ./FontAndColorThemes/*.xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/ || error_exit "copy remote codesnippet error"
 	fi
 }
 
