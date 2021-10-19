@@ -23,6 +23,12 @@ function sync_local() {
 	if [[ $(ls -l ~/Library/Developer/Xcode/UserData/FontAndColorThemes | grep -c '.xccolortheme') != 0 ]]; then
 		cp -f ~/Library/Developer/Xcode/UserData/FontAndColorThemes/*.xccolortheme ./FontAndColorThemes/ || error_exit "copy local xccolortheme error"
 	fi
+
+	if [ -n "$(git status -s)" ]; then
+		git add .
+		git commit -m "update"
+		git push origin master
+	fi
 	
 }
 
